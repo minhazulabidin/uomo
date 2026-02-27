@@ -4,10 +4,12 @@
   --primary: #222222;
   --secondary: #767676;
   --tertiary: #C32929;
+  --font-jost: var(--font-jost)
 }
 
 @theme {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-tertiary: var(--tertiary);
+  --font-jost: var(--font-jost)
 }
