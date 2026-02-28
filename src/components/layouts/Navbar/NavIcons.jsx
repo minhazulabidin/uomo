@@ -27,7 +27,7 @@ const NavIcons = () => {
                                     <DialogTrigger asChild>
                                         <button variant="outline" className={"border-none outline-none cursor-pointer"}>{item?.icon}</button>
                                     </DialogTrigger>
-                                    <DialogContent className="sm:max-w-md" showCloseButton={false}>
+                                    <DialogContent showCloseButton={false}>
                                         <Input
                                             id="link"
                                             placeholder="Type your search query here..."
