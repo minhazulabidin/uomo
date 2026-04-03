@@ -7,11 +7,11 @@ const Item = ({ category }) => {
     <div
       className={`${category.id === 1 && "col-span-2 row-span-2"} ${
         category.id === 2 && "col-span-2"
-      } cursor-pointer`}
+      } cursor-pointer bg-cover! bg-center! bg-no-repeat!`}
       style={{
         background: isBgColor
           ? "#F5E6E0"
-          : `url(${category?.image?.src}) center center/cover`,
+          : `url(${category?.image?.src})`,
       }}
     >
       <div className="flex flex-col h-full justify-end pb-10 ps-10 font-jost">
