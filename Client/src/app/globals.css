@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "shadcn/tailwind.css";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -141,14 +142,14 @@
 
 .slick-dots li button:before {
   color: black !important;
-
   font-size: 12px;
   opacity: 0.7;
 }
 
+/* 
 .slick-dots li.slick-active button:before {
   color: black !important;
   border: 2px solid black;
   border-radius: 50%;
   opacity: 1;
-}
+} */
