@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import springImage from "../../../../public/images/springImg.png";
 import Image from "next/image";
+import { CountDownTime } from "@/utils/CountDownTime";
 
 export default function SpringCollections() {
   return (
@@ -11,7 +12,7 @@ export default function SpringCollections() {
         <div className="flex justify-between">
           <div className="flex flex-col justify-between">
             <div>
-              <div className="flex items-center gap-1.5 pt-50 mb-3">
+              <div className="mb-3 flex items-center gap-1.5 pt-50">
                 <span className="bg-tertiary h-[2px] w-6"></span>
                 <p className="text-tertiary font-jost text-xs leading-6 font-medium tracking-widest">
                   DEAL OF THE WEEK
@@ -31,14 +32,8 @@ export default function SpringCollections() {
             </div>
 
             {/* TIMER */}
-            <div className="mt-8 flex gap-6 text-sm text-gray-700">
-              {["DAYS", "HOURS", "MINS", "SEC"].map((label, i) => (
-                <div key={i}>
-                  <h2 className="text-lg font-medium">05</h2>
-                  <p className="text-xs">{label}</p>
-                </div>
-              ))}
-            </div>
+          
+            <CountDownTime />
           </div>
 
           {/* RIGHT (IMAGE) */}
