@@ -6,9 +6,9 @@ export default function Product() {
   return (
     <div>
       <Image src={productImage} alt="product" className="h-auto w-full" />
-      <h4 className="my-2 text-sm text-secondary ">Dresses</h4>
-      <h2>Cropped Faux Leather Jacket</h2>
-      <h4>$29</h4>
+      <h4 className="my-2 text-sm text-secondary font-jost leading-6">Dresses</h4>
+      <h2 className="my-2 text-base text-primary font-jost leading-[100%]">Cropped Faux Leather Jacket</h2>
+      <h4 className="my-2 text-base text-primary font-jost leading-[100%]">$29</h4>
     </div>
   );
 }
