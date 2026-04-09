@@ -19,7 +19,12 @@ const Products = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-4 gap-7.5">
+        <div className="grid grid-cols-4 gap-7.5 mt-10">
+          <Product />
+          <Product />
+          <Product />
+          <Product />
+          <Product />
           <Product />
         </div>
       </Container>
