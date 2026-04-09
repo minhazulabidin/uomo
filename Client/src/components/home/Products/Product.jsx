@@ -6,8 +6,17 @@ import { Heart } from "lucide-react";
 export default function Product() {
   return (
     <div>
-      <Image src={productImage} alt="product" className="h-auto w-full cursor-pointer" />
-      <div className="flex justify-between mt-3.5">
+      <div className="relative group">
+        <Image
+          src={productImage}
+          alt="product"
+          className="h-auto w-full cursor-pointer"
+        />
+        <button className="absolute bottom-2.5 w-[95%] left-1/2 -translate-x-1/2 * bg-white py-4 hidden group-hover:block cursor-pointer font-medium font-jost text-base">
+          ADD TO CART
+        </button>
+      </div>
+      <div className="mt-3.5 flex justify-between">
         <div className="space-y-2.5">
           <h4 className="text-secondary font-jost text-sm leading-6">
             Dresses
@@ -19,7 +28,7 @@ export default function Product() {
             $29
           </h4>
         </div>
-        <Heart className="text-secondary cursor-pointer"/>
+        <Heart className="text-secondary cursor-pointer" />
       </div>
     </div>
   );
