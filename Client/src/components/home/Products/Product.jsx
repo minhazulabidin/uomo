@@ -12,7 +12,7 @@ export default function Product() {
           alt="product"
           className="h-auto w-full cursor-pointer"
         />
-        <button className="absolute bottom-2.5 w-[95%] left-1/2 -translate-x-1/2 * bg-white py-4 hidden group-hover:block cursor-pointer font-medium font-jost text-base">
+        <button className="absolute bottom-2.5 w-[95%] left-1/2 -translate-x-1/2 * bg-white py-4 opacity-0 group-hover:opacity-100 cursor-pointer font-medium font-jost text-base transition-all duration-300">
           ADD TO CART
         </button>
       </div>
