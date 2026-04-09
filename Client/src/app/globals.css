@@ -7,7 +7,7 @@
 :root {
   --primary: #222222;
   --secondary: #767676;
-  --tertiary: #C32929;
+  --tertiary: #D6001C;
   --font-jost: var(--font-jost);
   --radius: 0.625rem;
   --card: oklch(1 0 0);
