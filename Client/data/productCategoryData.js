@@ -4,15 +4,15 @@ export const productCategoryData = [
         title: "ALL"
     },
     {
-        id: 1,
+        id: 2,
         title: "NEWARRIVALS"
     },
     {
-        id: 1,
+        id: 3,
         title: "BEST SELLER"
     },
     {
-        id: 1,
+        id: 4,
         title: "TOP RATING"
     },
 ]
