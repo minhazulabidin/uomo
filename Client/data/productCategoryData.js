@@ -1,18 +1,37 @@
 export const productCategoryData = [
     {
         id: 1,
-        title: "ALL"
+        title: "ALL",
+        slug:"all"
     },
     {
         id: 2,
-        title: "NEWARRIVALS"
+        title: "Beauty",
+         slug:"beauty"   
     },
     {
         id: 3,
-        title: "BEST SELLER"
+        title: "Fragrances",
+        slug: "fragrances"
     },
     {
         id: 4,
-        title: "TOP RATING"
+        title: "Furniture",
+        slug: "Furniture"
+    },
+    {
+        id: 5,
+        title: "Groceries",
+        slug: "groceries"
+    },
+    {
+        id: 6,
+        title: "Home Decoration",
+        slug: "home-decoration"
+    },
+    {
+        id: 7,
+        title: "Kitchen Accessories",
+        slug: "kitchen-accessories"
     },
 ]
