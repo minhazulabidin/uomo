@@ -17,7 +17,7 @@ export const productCategoryData = [
     {
         id: 4,
         title: "Furniture",
-        slug: "Furniture"
+        slug: "furniture"
     },
     {
         id: 5,

@@ -5,7 +5,6 @@ import { Heart } from "lucide-react";
 
 export default function Product({ product }) {
 
-  console.log(product.category)
 
   return (
     <div>
@@ -30,7 +29,7 @@ export default function Product({ product }) {
             {product?.title}
           </h2>
           <h4 className="text-primary font-jost text-base leading-[100%]">
-            {product?.price}
+            {Math.floor(product?.price * 15)} Taka
           </h4>
         </div>
         <Heart className="text-secondary cursor-pointer" />

@@ -8,13 +8,24 @@ import axios from "axios";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [activeCategory, setActiveCategory] = useState("all");
+  const [visibleCount, setVisibleCount] = useState(8);
+
+
   useEffect(() => {
     const fetchData = async () => {
       axios.get("https://dummyjson.com/products?limit=50").then(res => setProducts(res.data.products)).catch(err => console.log(err))
     }
     fetchData()
   }, [])
-  
+
+  const filteredProducts =
+    activeCategory === "all"
+      ? products
+      : products.filter(
+        (product) => product.category === activeCategory
+      );
+
   return (
     <section id="products" className="mt-23.5 mb-20">
       <Container>
@@ -23,17 +34,37 @@ const Products = () => {
           {productCategoryData.map((item) => (
             <button
               key={item.id}
-              className="font-jost after:bg-primary hover:text-primary relative cursor-pointer font-medium text-[#767676] after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:duration-300 after:content-[''] hover:after:w-3/5"
+              onClick={() => {
+                setActiveCategory(item.slug);
+                setVisibleCount(8);
+              }}
+              className={`font-jost after:bg-primary hover:text-primary relative cursor-pointer font-medium text-[#767676] after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:duration-300 after:content-[''] hover:after:w-3/5 ${activeCategory === item.slug ? "text-primary after:w-3/5" : ""}`}
             >
               {item.title}
             </button>
           ))}
         </div>
         <div className="grid grid-cols-4 gap-7.5 mt-10">
-          {
-            products?.map((product, idx) => (<Product product={product} key={idx} />))
-          }
+          {filteredProducts
+            .slice(0, visibleCount)
+            .map((product, idx) => (
+              <Product product={product} key={idx} />
+            ))}
         </div>
+        {filteredProducts.length > 8 && (
+          <div className="flex justify-center mt-10">
+            <button
+              onClick={() =>
+                visibleCount < filteredProducts.length
+                  ? setVisibleCount(filteredProducts.length)
+                  : setVisibleCount(8)
+              }
+              className="px-6 py-2 bg-primary text-white rounded-md hover:opacity-90 cursor-pointer"
+            >
+              {visibleCount < filteredProducts.length ? "See All" : "See Less"}
+            </button>
+          </div>
+        )}
       </Container>
     </section>
   );
