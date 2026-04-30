@@ -7,7 +7,7 @@ export default function Product({ product }) {
 
 
   return (
-    <div>
+    <div className="w-82.5 ">
       <div className="relative group">
         <Image
           src={product?.thumbnail}
@@ -20,7 +20,7 @@ export default function Product({ product }) {
           ADD TO CART
         </button>
       </div>
-      <div className="mt-3.5 flex justify-between">
+      <div className="mt-3.5 flex justify-between px-4">
         <div className="space-y-2.5">
           <h4 className="text-secondary font-jost text-sm leading-6">
             {product?.category}

@@ -153,3 +153,7 @@
   border-radius: 50%;
   opacity: 1;
 }
+
+.limite > .slick-slide {
+  margin: 0 30px;
+}

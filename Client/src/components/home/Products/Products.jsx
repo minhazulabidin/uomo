@@ -17,7 +17,7 @@ const Products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await api.get("/products");
+        const res = await api.get("/products?limit=100");
         setProducts(res.data.products);
       } catch (err) {
         console.log(err);

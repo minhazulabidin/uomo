@@ -1,5 +1,6 @@
 import Banner from "@/components/home/Banner";
 import Category from "@/components/home/Category/Category";
+import LimitedEdition from "@/components/home/LimitedEdition/LimitedEdition";
 import Products from "@/components/home/Products/Products";
 import SpringCollections from "@/components/home/SeasonalCollection/SpringCollections";
 import TrendyCategory from "@/components/home/TrendyCategory/TrendyCategory";
@@ -13,6 +14,7 @@ export default function Home() {
       <Products />
       <SpringCollections />
       <TrendyCategory />
+      <LimitedEdition />
     </main>
   );
 }
