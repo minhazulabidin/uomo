@@ -6,6 +6,7 @@ import Container from "@/components/layouts/Container";
 import Product from "./Product";
 import axios from "axios";
 import ProductSkeleton from "./ProductSkelton";
+import api from "@/utils/api";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -16,7 +17,7 @@ const Products = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axios.get("https://dummyjson.com/products?limit=50");
+        const res = await api.get("/products");
         setProducts(res.data.products);
       } catch (err) {
         console.log(err);

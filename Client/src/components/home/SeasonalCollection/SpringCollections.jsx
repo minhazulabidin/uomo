@@ -13,7 +13,7 @@ export default function SpringCollections() {
           <div className="flex flex-col justify-between">
             <div>
               <div className="mb-3 flex items-center gap-1.5 pt-50">
-                <span className="bg-tertiary h-[2px] w-6"></span>
+                <span className="bg-tertiary h-0.5 w-6"></span>
                 <p className="text-tertiary font-jost text-xs leading-6 font-medium tracking-widest">
                   DEAL OF THE WEEK
                 </p>
