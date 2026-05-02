@@ -7,7 +7,7 @@ import navbarData from '../../../../data/navbarData'
 
 export default function Navbar() {
   return (
-    <header>
+    <header className='relative'>
       <nav>
         <Container>
           <div className="flex items-center py-2 justify-between">

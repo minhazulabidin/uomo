@@ -15,28 +15,19 @@ import { Input } from "@/components/ui/input"
 import { Sheet, SheetClose, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { XIcon } from 'lucide-react'
 import LoginForm from '../LoginForm/LoginForm'
+import SearchBar from '../CommonLayout/SearchBar'
 
 
 
 const NavIcons = () => {
     return (
-        <ul className='flex gap-8'>
+        <ul className='flex gap-8 '>
             {
                 navbarData.icons.map((item, index) => (
                     <li key={index}>
                         {
                             item?.name == "search" ? (
-                                <Dialog>
-                                    <DialogTrigger asChild>
-                                        <button variant="outline" className={"border-none outline-none cursor-pointer"}>{item?.icon}</button>
-                                    </DialogTrigger>
-                                    <DialogContent showCloseButton={false}>
-                                        <Input
-                                            id="link"
-                                            placeholder="Type your search query here..."
-                                        />
-                                    </DialogContent>
-                                </Dialog>
+                                <SearchBar item={item}/>
 
                             ) : item.name == "user" ? (
                                 <Sheet>

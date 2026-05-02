@@ -8,7 +8,7 @@ const jost = Jost({
 
 
 export const metadata = {
-  title: "Uomo Nextjs Ecommerce App",
+  title: "Baarong Nextjs Ecommerce App",
   description: "A modern and stylish ecommerce application built with Next.js, offering a seamless shopping experience for users. Explore a wide range of products, enjoy fast performance, and experience the future of online shopping with Uomo.",
 };
 
