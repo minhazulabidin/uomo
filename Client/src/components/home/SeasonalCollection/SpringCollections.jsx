@@ -1,9 +1,10 @@
 import Container from "@/components/layouts/Container";
 import Link from "next/link";
 import React from "react";
-import springImage from "../../../../public/images/springImg.png";
+import wedImg from "../../../../public/images/weddImg.png";
 import Image from "next/image";
 import { CountDownTime } from "@/utils/CountDownTime";
+import Btn from "@/components/layouts/CommonLayout/Btn";
 
 export default function SpringCollections() {
   return (
@@ -20,19 +21,14 @@ export default function SpringCollections() {
               </div>
 
               <h1 className="text-primary font-jost text-4xl md:text-[70px]">
-                <span className="font-bold">SPRING</span> COLLECTION
+                <span className="font-bold">WEDDING</span> COLLECTION
               </h1>
 
-              <Link
-                href="#"
-                className="after:bg-primary font-jost relative mt-6 cursor-pointer text-sm after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:duration-300 after:content-[''] hover:after:w-3/5"
-              >
-                SHOP NOW
-              </Link>
+              <Btn href='#' title="SHOP NOW" />
             </div>
 
             {/* TIMER */}
-          
+
             <CountDownTime />
           </div>
 
@@ -40,7 +36,7 @@ export default function SpringCollections() {
           <div className="flex justify-center">
             <div className="flex items-center justify-center bg-gray-200">
               <Image
-                src={springImage}
+                src={wedImg}
                 alt="Spring Collection"
                 className="h-full w-full object-contain"
               />
