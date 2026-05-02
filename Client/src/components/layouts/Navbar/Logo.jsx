@@ -6,7 +6,7 @@ import logo from '../../../../public/images/logo.png'
 const Logo = () => {
     return (
         <Link href="/">
-            <Image src={logo} alt="UOMO-Logo" width={100} height={100} className="w-[111.55px] h-[27.01px]" />
+            <Image src={logo} alt="UOMO-Logo" width={100} height={100} className="w-2/4" />
         </Link>
     )
 }

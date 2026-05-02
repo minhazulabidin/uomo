@@ -10,10 +10,10 @@ export default function Navbar() {
     <header>
       <nav>
         <Container>
-          <div className="flex items-center py-7 justify-between">
+          <div className="flex items-center py-2 justify-between">
             <div className='flex gap-14'>
               <Logo />
-              <ul className='flex gap-11.25 font-jost'>
+              <ul className='flex items-center gap-11.25 font-jost'>
                 {
                   navbarData.navList.map(item => (
                     <li className='relative' key={item.id}>
