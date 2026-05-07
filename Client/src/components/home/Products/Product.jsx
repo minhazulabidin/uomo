@@ -14,7 +14,7 @@ export default function Product({ product }) {
           alt=""
           width={330}
           height={400}
-          className=" cursor-pointer"
+          className=" cursor-pointer w-auto h-auto"
         />
         <button className="absolute bottom-2.5 w-[95%] left-1/2 -translate-x-1/2  bg-gray-200 py-4 opacity-0 group-hover:opacity-100 cursor-pointer font-medium font-jost text-base transition-all duration-300">
           ADD TO CART
