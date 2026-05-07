@@ -9,6 +9,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { Separator } from '../ui/separator'
 
 const items = [
   { label: "Jeans", value: "jeans" },
@@ -24,7 +25,7 @@ const ViewAndSort = () => {
   return (
     <div className='flex-1 flex justify-end'>
       <Select defaultValue="jeans">
-        <SelectTrigger className="w-full max-w-35 border-t-0 border-x-0 border-b border-input rounded-none focus:ring-0 px-2 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 font-jost text-primary font-semibold">
+        <SelectTrigger className="w-full max-w-35 border-t-0 border-x-0 border-b rounded-none focus:ring-0 px-2 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 font-jost text-primary font-semibold border-primary">
           <SelectValue placeholder="Select an item" />
         </SelectTrigger>
         <SelectContent>
@@ -38,6 +39,10 @@ const ViewAndSort = () => {
           </SelectGroup>
         </SelectContent>
       </Select>
+      <Separator orientation="vertical" className="mx-7.5"/>
+      <div>
+        
+      </div>
     </div>
   )
 }

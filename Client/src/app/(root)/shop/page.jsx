@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/layouts/CommonLayout/Breadcrumbs";
 import Container from "@/components/layouts/Container";
 import ViewAndSort from "@/components/Shop/ViewAndSort";
+import Pagination from "@/components/Shop/Pagination";
 
 const page = () => {
   const shopNav = [
@@ -46,6 +47,7 @@ const page = () => {
             <Breadcrumbs />
             <ViewAndSort />
           </div>
+          <Pagination itemsPerPage={3} />
         </Container>
       </section>
     </main>
