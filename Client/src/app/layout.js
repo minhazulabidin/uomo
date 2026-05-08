@@ -1,5 +1,6 @@
 import { Jost } from "next/font/google";
 import "./globals.css";
+// import '@/bones/registry'
 
 const jost = Jost({
   variable: "--font-jost",

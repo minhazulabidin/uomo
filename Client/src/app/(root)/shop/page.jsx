@@ -5,6 +5,7 @@ import { Breadcrumbs } from "@/components/layouts/CommonLayout/Breadcrumbs";
 import Container from "@/components/layouts/Container";
 import ViewAndSort from "@/components/Shop/ViewAndSort";
 import Pagination from "@/components/Shop/Pagination";
+import useViewProductStore from "@/ZustandStore/ViewProduct.store";
 
 const page = () => {
   const shopNav = [
@@ -41,13 +42,15 @@ const page = () => {
         </ul>
       </div>
       <section className="mt-9">
-        <aside></aside>
-        <Container>
-          <div className="flex justify-between">
-            <Breadcrumbs />
-            <ViewAndSort />
+        <Container className="flex gap-15">
+          <aside className="w-full max-w-75"></aside>
+          <div className="w-full">
+            <div className="flex justify-between">
+              <Breadcrumbs />
+              <ViewAndSort />
+            </div>
+            <Pagination/>
           </div>
-          <Pagination itemsPerPage={9} />
         </Container>
       </section>
     </main>

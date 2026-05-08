@@ -66,7 +66,7 @@ const LimitedEdition = () => {
     }
 
     return (
-        <section className='mt-25 limite'>
+        <section className='mt-25 limited'>
             <Container>
                 <Title title='LIMITED' titleB='EDITION' className="mb-5"/>
                
