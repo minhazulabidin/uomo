@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import ReactPaginate from 'react-paginate';
 import Product from '../home/Products/Product';
 import useViewProductStore from '@/ZustandStore/ViewProduct.store';
+import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 
 
 
@@ -16,10 +18,16 @@ function Items({ currentItems, view, isLoading, itemsPerPage }) {
 
       {isLoading
         ? skeletonArray.map((_, index) => (
-          <div
-            key={index}
-            className="h-75 w-full bg-gray-200 animate-pulse rounded"
-          />
+          <Card className="w-full max-w-xs border-0" key={index}>
+              <CardContent>
+              <Skeleton className="aspect-video w-full" />
+            </CardContent>
+            <CardHeader>
+              <Skeleton className="h-4 w-2/3" />
+              <Skeleton className="h-4 w-1/2" />
+            </CardHeader>
+          
+          </Card>
         ))
 
         : currentItems?.map((product) => (
@@ -80,7 +88,7 @@ const Pagination = () => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
       setIsPageChanging(false);
-    }, 300);
+    }, 500);
 
     return () => clearTimeout(timeout);
   }, [itemOffset, view]);
