@@ -33,7 +33,7 @@ const page = () => {
             <li key={index}>
               <Link
                 href="#"
-                className="after:bg-primary font-jost text-primary relative mt-6 cursor-pointer text-sm font-semibold after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:duration-300 after:content-[''] hover:after:w-3/5"
+                className="after:bg-primary font-jost text-primary mt-6 text-sm font-semibold link-underline"
               >
                 {item}
               </Link>
@@ -44,7 +44,7 @@ const page = () => {
       <section className="mt-9">
         <Container className="flex gap-15">
           <aside className="w-full max-w-75"></aside>
-          <div className="w-full">
+          <div className="w-full flex-1">
             <div className="flex justify-between">
               <Breadcrumbs />
               <ViewAndSort />

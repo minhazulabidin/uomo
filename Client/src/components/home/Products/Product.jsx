@@ -7,14 +7,14 @@ export default function Product({ product }) {
 
 
   return (
-    <div className="w-full pb-3">
+    <div className="w-full">
       <div className="relative group">
         <Image
           src={product?.thumbnail}
           alt=""
           width={1000}
           height={100}
-          className=" cursor-pointer w-full h-full "
+          className="cursor-pointer w-full h-full "
         />
         <button className="absolute bottom-2.5 w-[95%] left-1/2 -translate-x-1/2  bg-gray-200 py-4 opacity-0 group-hover:opacity-100 cursor-pointer font-medium font-jost text-base transition-all duration-300">
           ADD TO CART

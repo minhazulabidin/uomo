@@ -14,19 +14,26 @@ function Items({ currentItems, view, isLoading, itemsPerPage }) {
   const skeletonArray = Array(itemsPerPage).fill(null);
 
   return (
-    <div className={`mt-9 grid grid-cols-${view ? view : "3"} gap-6`}>
+    <div className={`mt-9 grid gap-6 ${Number(view) === 3
+        ? "grid-cols-3"
+        : Number(view) === 4
+          ? "grid-cols-4"
+          : Number(view) === 5
+            ? "grid-cols-5"
+            : "grid-cols-3"
+      }`}>
 
       {isLoading
         ? skeletonArray.map((_, index) => (
           <Card className="w-full max-w-xs border-0" key={index}>
-              <CardContent>
+            <CardContent>
               <Skeleton className="aspect-video w-full" />
             </CardContent>
             <CardHeader>
               <Skeleton className="h-4 w-2/3" />
               <Skeleton className="h-4 w-1/2" />
             </CardHeader>
-          
+
           </Card>
         ))
 
@@ -61,7 +68,7 @@ const Pagination = () => {
     const newOffset =
       (event.selected * itemsPerPage) % products.length;
     setItemOffset(newOffset);
-
+    window.scrollTo({ top: 250, behavior: 'smooth' });
   };
   useEffect(() => {
     const fetchProducts = async () => {
@@ -114,8 +121,8 @@ const Pagination = () => {
         className="flex justify-center relative mt-13.75 text-primary font-jost font-semibold text-6 gap-7.5"
         previousClassName="absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer"
         nextClassName="absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer"
-        pageClassName="cursor-pointer after:bg-primary relative after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:duration-300 after:content-[''] hover:after:w-3/5"
-        activeClassName="after:w-3/5"
+        pageClassName="link-underline font-semibold"
+        activeClassName="link-underline-active"
       />
     </div>
   )

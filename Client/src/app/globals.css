@@ -154,6 +154,30 @@
   opacity: 1;
 }
 
-.limited > .slick-slide {
+.limited>.slick-slide {
   margin: 0 30px;
+}
+
+.link-underline {
+  cursor: pointer;
+  position: relative !important;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition-duration: 300ms;
+}
+
+.link-underline:hover::after {
+  width: 60%;
+}
+
+.link-underline-active::after {
+  width: 60% ;
 }

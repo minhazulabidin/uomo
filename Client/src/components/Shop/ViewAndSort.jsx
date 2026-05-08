@@ -54,7 +54,7 @@ const ViewAndSort = () => {
       <div className="font-jost font-semibold text-sm flex items-center text-primary">
         VIEW {
           [3, 4, 5].map((num, idx) => (
-            <button key={idx} className=" ml-2.5 cursor-pointer after:bg-primary relative after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-0 after:duration-300 after:content-[''] hover:after:w-3/5" onClick={() => setView(num)}> {num}</button>
+            <button key={idx} className=" ml-2.5 link-underline" onClick={() => setView(num)}> {num}</button>
           ))
         }
       </div>
