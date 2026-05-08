@@ -47,7 +47,7 @@ const page = () => {
             <Breadcrumbs />
             <ViewAndSort />
           </div>
-          <Pagination itemsPerPage={3} />
+          <Pagination itemsPerPage={9} />
         </Container>
       </section>
     </main>
