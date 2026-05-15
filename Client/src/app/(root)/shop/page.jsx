@@ -6,6 +6,7 @@ import Container from "@/components/layouts/Container";
 import ViewAndSort from "@/components/Shop/ViewAndSort";
 import Pagination from "@/components/Shop/Pagination";
 import useViewProductStore from "@/ZustandStore/ViewProduct.store";
+import ShopSidebar from "@/components/Shop/ShopSidebar";
 
 const page = () => {
   const shopNav = [
@@ -43,13 +44,15 @@ const page = () => {
       </div>
       <section className="mt-9">
         <Container className="flex gap-15">
-          <aside className="w-full max-w-75"></aside>
+          <aside className="w-full max-w-75">
+            <ShopSidebar />g
+          </aside>
           <div className="w-full flex-1">
             <div className="flex justify-between">
               <Breadcrumbs />
               <ViewAndSort />
             </div>
-            <Pagination/>
+            <Pagination />
           </div>
         </Container>
       </section>
